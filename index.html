@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="apple-touch-icon" sizes="180x180" href="favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="manifest" href="site.webmanifest">
@@ -221,6 +221,18 @@ z-index: 99;
   z-index: 99;
 } 
 
+#star {
+  animation: rotateStar 6s linear infinite;
+  display: inline-block;
+}
+
+@keyframes rotateStar {
+  0% {transform: rotate(0deg);}
+  50% {transform: rotate(360deg);}
+  70% {transform: rotate(0deg);}
+  100% {transform: rotate(0deg);}
+}
+
 .footer-text {
   margin-top: 0;
   padding: 20px;
@@ -319,6 +331,7 @@ transform: scale(1.1);
     #details {
       text-decoration: line-through;
     }
+
 .single-item {
   grid-column: 1 / -1;
   width: auto;
@@ -452,12 +465,12 @@ document.addEventListener('DOMContentLoaded', function() {
 <section id="page1" class="page">
   <img class="white" src="white.jpeg">
   <h1 class="logo"><img rel="preload" src="Rlogo.jpg" as="image" top="1%";> </h1>
-  <iframe width="auto" height="280"
-    src="https://www.youtube.com/embed/O8fVaMA59jI?si=EAwO_oREx9muk5f5&amp;controls=0&amp;start=1"
-    title="YouTube video player" frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-  </iframe>
+  <iframe width="auto" height="290" 
+  src="https://www.youtube.com/embed/Kpko8Pqqxrg?si=7hHD6fnirNn-3EGo&amp;controls=0&amp;start=1" 
+  title="YouTube video player" frameborder="0" 
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" 
+  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+</iframe>
   <div class="center-txt">
     <a href="#" class="clickable-txt" id="accessBtn">Continue</a>
   </div>
@@ -531,7 +544,7 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
 
       <a href="https://wa.me/message/BL27QY22NKXMC1" class="cl">
-        <img src="star.jpg" alt="Hoodie">
+        <img id="star" src="star.jpg" alt="Hoodie">
     </a>
   </div>
   <div class="footer-text">
@@ -548,7 +561,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const codeInput = document.getElementById('codeInput');
     const errorMsg = document.getElementById('errorMsg');
 
-    const correctCode = "WH25";
+    const correctCode = "BB25";
 
     accessBtn.addEventListener('click', function (e) {
       e.preventDefault();
